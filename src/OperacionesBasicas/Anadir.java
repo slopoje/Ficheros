@@ -1,4 +1,4 @@
-package FicherosTexto;
+package OperacionesBasicas;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,14 +14,14 @@ import java.util.logging.Logger;
  * <a href=https://puntocomnoesunlenguaje.blogspot.com/search?q=ficheros+de+texto>Ficheros
  * Texto</a>
  */
-public class CrearEscribir {
+public class Anadir {
 
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
         
         try {
-            FileWriter fw = new FileWriter("datos.txt");
+            FileWriter fw = new FileWriter("datos.txt",true);
             PrintWriter pw = new PrintWriter(fw);
             String cadena;
             System.out.println("Introduce línea de texto. Para acabar introduce la cadena FIN:");

@@ -1,11 +1,9 @@
-package FicherosTexto;
+package OperacionesBasicas;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -14,14 +12,14 @@ import java.util.logging.Logger;
  * <a href=https://puntocomnoesunlenguaje.blogspot.com/search?q=ficheros+de+texto>Ficheros
  * Texto</a>
  */
-public class Anadir {
+public class CrearEscribir {
 
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
         
         try {
-            FileWriter fw = new FileWriter("datos.txt",true);
+            FileWriter fw = new FileWriter("datos.txt");
             PrintWriter pw = new PrintWriter(fw);
             String cadena;
             System.out.println("Introduce línea de texto. Para acabar introduce la cadena FIN:");

@@ -1,4 +1,4 @@
-package FicherosTexto;
+package OperacionesBasicas;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
