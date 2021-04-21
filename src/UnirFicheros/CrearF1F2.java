@@ -41,6 +41,8 @@ public class CrearF1F2 {
             pw = new PrintWriter(fw);
             System.out.println("Creando fichero F2...");
             System.out.println("Introduce línea de texto. FIN para terminar:");
+            
+            
             System.out.print(">>>");
             cadena = teclado.nextLine();                             //se introduce por teclado una cadena de texto    
             while (!cadena.equalsIgnoreCase("FIN")) {
@@ -48,6 +50,8 @@ public class CrearF1F2 {
                 System.out.print(">>>");
                 cadena = teclado.nextLine();                         //se introduce por teclado una cadena de texto    
             }
+            
+            
             pw.flush();
             pw.close();
             fw.close();

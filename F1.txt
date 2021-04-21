@@ -1,2 +1,1 @@
-Estoes 
-el fichero F1.txt
+Esto es F1

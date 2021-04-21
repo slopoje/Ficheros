@@ -15,6 +15,9 @@ public class UnirF1F2 {
         FileWriter fw;
         PrintWriter pw;
         String cadena;
+        StringBuilder f1 = new StringBuilder();
+        StringBuilder f2 = new StringBuilder();
+        StringBuilder f3 = new StringBuilder();
 
         try {
             fw = new FileWriter("F3.txt");
@@ -24,7 +27,7 @@ public class UnirF1F2 {
             br = new BufferedReader(fr);
             cadena = br.readLine();    //se lee la primera línea del fichero
             while (cadena != null) {               //mientras no se llegue al final del fichero                   
-                pw.println(cadena);        //se nuestra por pantalla
+                f1.append(cadena).append("\n");        //se nuestra por pantalla
                 cadena = br.readLine();       //se lee la siguiente línea del fichero                        
             }
 
@@ -32,14 +35,16 @@ public class UnirF1F2 {
             br = new BufferedReader(fr);
             cadena = br.readLine();    //se lee la primera línea del fichero
             while (cadena != null) {               //mientras no se llegue al final del fichero                   
-                pw.println(cadena);        //se nuestra por pantalla
+                f2.append(cadena).append("\n");;        //se nuestra por pantalla
                 cadena = br.readLine();       //se lee la siguiente línea del fichero                        
             }
-            
+
+            pw.print(f2);
+            pw.print(f1);
+
             pw.flush();
             pw.close();
-            
-            
+
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: Fichero no encontrado.");
         } catch (IOException ex) {
