@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Leer {
+public class PasarDeFicheroAArray {
 
     public static void main(String[] args) {
 
