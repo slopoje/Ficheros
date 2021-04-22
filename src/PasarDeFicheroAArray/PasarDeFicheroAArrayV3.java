@@ -19,28 +19,27 @@ import java.util.Scanner;
  * debe crearse con un número de posiciones fijo. ¿Cómo ajustar la longitud del
  * fichero a la longitud del array?
  *
- * Cuarta forma: se utiliza el método reverse() de la clase Collections para dar
- * la vuelta a listaLineas
+ * Tercera forma: se utiliza una lista (List) en lugar de un array.
  *
  *
  * @author Sebastián López
  * @version abril/2021
- * <a href=https://javadesdecero.es/arrays/bucle-for-each/>Comparativa entre
- * Array y ArrayList</a>
+ * @see
+ * <a href=https://www.javatpoint.com/difference-between-array-and-arraylist>Comparativa
+ * entre Array y ArrayList</a>
  */
-public class PasarDeFicheroAArrayV4 {
+public class PasarDeFicheroAArrayV3 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         String nombreFichero, linea;
         List<String> listaLineas = new ArrayList<String>();
-        int numeroLinea;
 
         System.out.print("Introduce el nombre del fichero de texto:");
         nombreFichero = teclado.nextLine();
         try {
             FileReader fr = new FileReader(nombreFichero);     //Abro el fichero para lectura
-            BufferedReader br = new BufferedReader(fr);    //Creo un flujo (stream) sobre el fichero abierto
+            BufferedReader br = new BufferedReader(fr);        //Creo un flujo (stream) sobre el fichero abierto
 
             linea = br.readLine();            //se lee la primera línea del fichero
             while (linea != null) {           //mientras no se llegue al final del fichero    
@@ -52,11 +51,9 @@ public class PasarDeFicheroAArrayV4 {
             br.close();
             fr.close();
 
-            Collections.reverse(listaLineas); //Se da la vuelta a la lista
-
-            for (String li : listaLineas) {//Se recorre la lista con un bucle for-each
-                System.out.println(li);
-            }
+            for(int i=listaLineas.size()-1;i>=0;--i){
+                System.out.println(listaLineas.get(i)); //Se imprime el elemento "i" de la lista
+            }          
 
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: fichero no encontrado.");
